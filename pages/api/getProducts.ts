@@ -14,7 +14,7 @@ type Data = {
 
 export default async function handler(
   req: NextApiRequest,
-  res: NextApiResponse<Data>
+  res: NextApiResponse<{products: Data[]}>
 ) {
     const products = await sanityClient.fetch(query);
     console.log(products);
