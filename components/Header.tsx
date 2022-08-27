@@ -19,7 +19,7 @@ function Header() {
                 </Link>
             </div>
             <div className='hidden flex-1 items-center justify-center font-bold text-lg  space-x-8 md:flex'>
-                <a href='http://localhost:3000/#services' className='headerLink'>Services</a>
+                <a href='https://www.kaam24x7.com/#services' className='headerLink'>Services</a>
                 <a href='/category' className='headerLink'>Explore</a>
                 <a className='headerLink'>Work</a>
             </div>
