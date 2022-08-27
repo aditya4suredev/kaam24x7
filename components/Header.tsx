@@ -21,7 +21,7 @@ function Header() {
             <div className='hidden flex-1 items-center justify-center font-bold text-lg  space-x-8 md:flex'>
                 <a href='https://www.kaam24x7.com/#services' className='headerLink'>Services</a>
                 <a href='/category' className='headerLink'>Explore</a>
-                <a className='headerLink'>Work</a>
+                <a className='headerLink'>About Us</a>
             </div>
             <div className='flex items-center justify-center gap-x-4 md:w-1/5'>
                 <SearchIcon className='headerIcon' />
