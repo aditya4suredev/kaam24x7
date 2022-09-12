@@ -1,10 +1,13 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
-import { SearchIcon, ShoppingBagIcon, UserIcon } from '@heroicons/react/outline'
+import { SearchIcon, ClipboardListIcon, UserIcon } from '@heroicons/react/outline'
+import { useSelector } from 'react-redux';
+import { selectBasketItems } from '../redux/basketSlice';
 
 function Header() {
     const session = false;
+    const items = useSelector(selectBasketItems);
     return (
         <header className="sticky top-0 z-30 flex w-full items-center justify-between bg-[#F6F4EE] p-4">
             <div className="flex items-center justify-center md:w-1/5">
@@ -27,8 +30,8 @@ function Header() {
                 <SearchIcon className='headerIcon' />
                 <Link href='/checkout'>
                     <div className='relative cursor-pointer'>
-                        <span className='absolute -right-1 -top-1 text-white  z-50 flex h-4 w-4 items-center justify-center rounded-full bg-gradient-to-r from-[#E5A763] to-[#5E474C] text-[10px]'>5</span>
-                        <ShoppingBagIcon className='headerIcon' />
+                        <span className='absolute -right-1 -top-1 text-white  z-50 flex h-4 w-4 items-center justify-center rounded-full bg-gradient-to-r from-[#5E474C] to-[#5E474C] font-bold text-[10px]'>{items.length}</span>
+                        <ClipboardListIcon className='headerIcon' />
                     </div>
                 </Link>
                 {session ? (

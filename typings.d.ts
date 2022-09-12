@@ -22,7 +22,7 @@ interface Product{
         _type: 'slug';
         current: string;   
     };
-    description:string;
+    description:blockContent;
     category: {
         _type: 'reference';
         _ref: string;

@@ -4,7 +4,7 @@
 
 @layer base{
     body{
-        @apply font-heroheading scrollbar-thin ;
+        @apply font-heroheading !scrollbar-thin !scrollbar-track-transparent !scrollbar-thumb-orange-900;
     }
 }
 

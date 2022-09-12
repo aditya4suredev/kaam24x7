@@ -1,6 +1,7 @@
 import { Tab } from "@headlessui/react";
 import { GetServerSideProps } from "next";
 import Head from "next/head";
+import Bookings from "../components/Bookings";
 import Header from "../components/Header";
 import Product from "../components/Product";
 import { fetchCategories } from "../utils/fetchCategories";
@@ -16,10 +17,13 @@ interface Props {
 
 function category({ categories, products }: Props) {
     const showProducts = (category: number) => {
-        return products
-            .filter((product) => product.category._ref === categories[category]._id)
-            .map((product) => <Product product={product} key={product._id} />);
-    };
+        return   products
+          .filter((product) => product.category._ref === categories[category]._id)
+          .map((product) => 
+              <Product product={product} key={product._id} /> 
+          );
+        
+      };
     return (
         <div>
             <Head>
@@ -28,6 +32,7 @@ function category({ categories, products }: Props) {
             </Head>
 
             <Header />
+            <Bookings />
 
 
             <div id="default-carousel" className="relative" data-carousel="static">
@@ -90,6 +95,23 @@ function category({ categories, products }: Props) {
                     <Tab.Panel className="tabPanel">{showProducts(1)}</Tab.Panel>
                     <Tab.Panel className="tabPanel">{showProducts(2)}</Tab.Panel>
                     <Tab.Panel className="tabPanel">{showProducts(3)}</Tab.Panel>
+                    <Tab.Panel className="tabPanel">{showProducts(4)}</Tab.Panel>
+                    <Tab.Panel className="tabPanel">{showProducts(5)}</Tab.Panel>
+                    <Tab.Panel className="tabPanel">{showProducts(6)}</Tab.Panel>
+                    <Tab.Panel className="tabPanel">{showProducts(7)}</Tab.Panel>
+                    <Tab.Panel className="tabPanel">{showProducts(8)}</Tab.Panel>
+                    <Tab.Panel className="tabPanel">{showProducts(9)}</Tab.Panel>
+                    <Tab.Panel className="tabPanel">{showProducts(10)}</Tab.Panel>
+                    <Tab.Panel className="tabPanel">{showProducts(11)}</Tab.Panel>
+                    <Tab.Panel className="tabPanel">{showProducts(12)}</Tab.Panel>
+
+
+
+
+                 
+
+
+
                 </Tab.Panels>
             </Tab.Group>
 
