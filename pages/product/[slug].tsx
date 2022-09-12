@@ -23,7 +23,7 @@ function Product({ product }: Props) {
     });
 };
 
-  console.log(product);
+ 
   return (
     <main>
       <Header />
