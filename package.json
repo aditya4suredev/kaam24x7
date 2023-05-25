@@ -30,6 +30,9 @@
     "react-redux": "^8.0.2",
     "tw-elements": "^1.0.0-alpha12"
   },
+  "engines": {
+    "node": "18.0.9"
+  },
   "devDependencies": {
     "@types/node": "18.0.9",
     "@types/react": "18.0.9",
