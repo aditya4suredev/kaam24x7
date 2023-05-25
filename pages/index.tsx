@@ -1,12 +1,11 @@
 import Head from 'next/head'
-import Link from "next/link";
+
 import Bookings from "../components/Bookings";
 import Header from '../components/Header'
 import Landing from '../components/Landing'
 import CategoriesCards from '../components/CategoriesCards'
-import Product from "../components/Product";
-import { useEffect, useState } from 'react';
-import axios from 'axios';
+
+
 
 
 
