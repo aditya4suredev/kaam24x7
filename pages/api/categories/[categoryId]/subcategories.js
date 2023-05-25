@@ -1,11 +1,11 @@
-import { connectToDatabase } from '../../../../utils/connectDB';
+import connectDb from '../../../../utils/connectDB';
 
 export default async function handler(req, res) {
   const { categoryId } = req.query;
 
   if (req.method === 'GET') {
     try {
-      const db = await connectToDatabase();
+      const db = await connectDb();
       const subcategories = await db
         .collection('subcategories')
         .find({ categoryId })
