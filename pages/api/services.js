@@ -1,5 +1,5 @@
 import nextConnect from 'next-connect';
-import Service from '../../path/to/Service';
+import Service from '../../models/Service';
 import db from '../../utils/connectDB';
 
 const handler = nextConnect();
