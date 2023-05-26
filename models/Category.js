@@ -1,7 +1,6 @@
 const mongoose = require('mongoose');
 
 
-mongoose.deleteModel('Category')
 
 const categorySchema = new mongoose.Schema({
   name: {
